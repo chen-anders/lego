@@ -46,7 +46,7 @@ func (a *AccountService) NewEAB(accMsg acme.Account, kid string, hmacEncoded str
 
 // Get Retrieves an account.
 func (a *AccountService) Get(accountURL string) (acme.Account, error) {
-	log.Printf("!!![GET] accountUrl: %s", accountUrl)
+	log.Printf("!!![GET] accountUrl: %s", accountURL)
 	if len(accountURL) == 0 {
 		return acme.Account{}, errors.New("account[get]: empty URL")
 	}
